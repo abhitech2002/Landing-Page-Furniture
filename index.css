@@ -476,6 +476,120 @@ main {
     }
 }
 
+/* General Design Section Styling */
+.design {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+    gap: 2rem;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+/* Left Image Collage Styling */
+.image-collage {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    position: relative;
+}
+
+.image-collage .left-side {
+    position: relative;
+    z-index: 2; /* Ensure left image is above the others */
+}
+
+.image-collage .left-side img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-collage > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.image-collage .bottom img {
+    position: relative;
+    top: -10px; 
+    left: -40px;
+    z-index: 2;
+    width: 110%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Text Content Styling */
+.design-title {
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.design-title h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.design-title p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Points Styling */
+.design-points {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.left-points {
+    list-style: none;
+    padding: 0;
+}
+
+.left-points li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.left-points li::before {
+    content: '✔';
+    font-size: 1rem;
+    color: #35736E;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+}
+
+/* Button Styling */
+.design-button button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #35736E;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.design-button button:hover {
+    background-color: #2a5e56;
+}
 
 
 /* Footer Styles */
