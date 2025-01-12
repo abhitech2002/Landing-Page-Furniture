@@ -659,6 +659,136 @@ main {
     }
 }
 
+/* Testimonials Section Styling */ 
+
+.testimonials {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Title Styling */
+.testimonials-title h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Content Container Styling */
+.testimonials-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+/* Arrow Styling */
+.arrow-left, .arrow-right {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.arrow-left::before, .arrow-right::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(45deg);
+}
+
+.arrow-left::before {
+    transform: rotate(225deg);
+}
+
+.arrow-right::before {
+    transform: rotate(45deg);
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: #ffe100;
+    transform: scale(1.1);
+}
+
+.arrow-left:hover::before, .arrow-right:hover::before {
+    border-color: #000000;
+}
+
+/* Content Box Styling */
+.content {
+    max-width: 800px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    flex: 1;
+    text-align: left;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .testimonials-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .arrow-left, .arrow-right {
+        order: 2;
+    }
+
+    .content {
+        order: 2;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .arrow-left, .arrow-right {
+        width: 30px;
+        height: 30px;
+    }
+
+    .content {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-title h2 {
+        font-size: 22px;
+    }
+
+    .content {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .arrow-left, .arrow-right {
+        display: none;
+    }
+}
 
 /* Footer Styles */
 footer {
